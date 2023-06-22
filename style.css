@@ -14,6 +14,16 @@
     --Very-Hover-Color: hsl(235, 19%, 35%);
 }
 
+.dark-mode{
+    --Color-Background: hsl(235, 24%, 19%);
+    --White : hsl(0,0%,100%);
+    --Box-Shadow: hsl(235, 21%, 11%);
+    --List-Border-Color: hsl(237, 14%, 26%);
+    --Black-And-White: hsl(0,0%,100%);
+    --Secondary-Color: hsl(234, 11%, 52%);
+    --Very-Hover-Color: hsl(0,0%,100%);
+}
+
 *{
     margin: 0;
     padding: 0;
