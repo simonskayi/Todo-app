@@ -54,7 +54,7 @@ body{
  margin-bottom: 20px;
  }
 
- /*change name to row 1*/
+
 .row-1-element{
     display: flex;
     justify-content: space-between;
@@ -156,13 +156,14 @@ form {
 .check img{
     transform: scale(0);
 }
+
 .check-active{
     background: linear-gradient(to right, hsl(192, 100%, 67%),hsl(280, 87%, 65%));
 }
+
 .check-active img{
     transform: scale(1);
 }
-
 
 .erase-todo{
     margin-left: 90px;
@@ -170,9 +171,9 @@ form {
 }
 
 .list-element:hover .erase-todo{
-    opacity: 1;
-    
+    opacity: 1; 
 }
+
 .todo-is-complete{
     text-decoration: line-through;
     color: var(--Secondary-Color);
