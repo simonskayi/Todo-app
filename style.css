@@ -1,0 +1,223 @@
+:root{
+
+    /*Typography*/
+    --Custom-Font-size: 18px;
+    --custom-radius: 5px;
+
+    /*### Light Theme  */
+    --Color-Background: hsl(0, 0%, 98%);
+    --White : hsl(0,0%,100%);
+    --List-Border-Color: hsl(234, 39%, 85%);
+    --Secondary-Color: hsl(236, 9%, 61%);
+    --Box-Shadow: hsl(236, 9%, 61%);
+    --Black-And-White: hsl(235, 21%, 11%);
+    --Very-Hover-Color: hsl(235, 19%, 35%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color:var(--Color-Background);
+}
+
+.main-container{
+    font-family: 'josefin sans', sans-serif;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    background-color: var(--Color-Background);
+} 
+
+.header-background{
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    height: 250px;
+ }
+ 
+ .header-background img{
+ height: 100%;
+ width: 100%;
+ object-fit: cover;
+ object-position: left;
+ }
+ 
+ .todo-screen-container{
+  z-index: 1;
+ width: 100%;
+ max-width: 540px;
+ margin-top: 80px;
+ margin-bottom: 20px;
+ }
+
+ /*change name to row 1*/
+.row-1-element{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+h2{
+    text-transform: uppercase ;
+    font-size: 35px;
+    font-weight: bold;
+    letter-spacing: 15px;
+    color: var(--White);
+}
+
+.todo-input-box{
+    margin-top: 30px;
+   background-color: var(--Color-Background);
+   padding: 12px 20px 12px 50px;
+   height: 25px;
+   display: flex;
+   justify-content: start;
+   align-items: center;
+   position: relative;
+   border-radius: var(--custom-radius);
+   }
+   
+   .todo-input-box input{
+       width: 100%;
+       border: none;
+       padding-top: 7px;
+       padding-bottom: 7px;
+       background-color: var(--Color-Background);
+       outline: none;
+       color: var(--Black-And-White);
+       font-size: var(--Custom-Font-size);
+   }
+
+   
+form {
+    flex-grow: 1;
+}
+
+ form::before {
+    content: " ";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 2px solid var(--Secondary-Color);
+    left: 10px;
+    top : 12px;
+}
+
+
+.todo-list-container{
+    margin-top: 30px;
+    width: 100%;
+    background-color: var(--Color-Background);
+    border-radius: var(--custom-radius);
+    box-shadow:  1px 0.6px 5.4px 0.6px var(--Box-Shadow);
+   
+}
+
+.list-element{
+    position: relative;
+    display: flex;
+    font-size: var(--Custom-Font-size);
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    border-bottom: 1px solid var(--List-Border-Color);
+    cursor: pointer;
+    
+
+}
+.list-element p{
+   width: 70%;
+    margin-left: 50px;
+   word-wrap: break-word;
+   
+
+}
+
+.check{
+    position: absolute;
+    left: 10px;
+    top : 12px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--Secondary-Color);
+    border-radius: 50%;
+    place-content: center;
+    display: grid;
+    cursor: pointer;
+}
+.check img{
+    transform: scale(0);
+}
+.check-active{
+    background: linear-gradient(to right, hsl(192, 100%, 67%),hsl(280, 87%, 65%));
+}
+.check-active img{
+    transform: scale(1);
+}
+
+
+.erase-todo{
+    margin-left: 90px;
+    opacity: 0;
+}
+
+.list-element:hover .erase-todo{
+    opacity: 1;
+    
+}
+.todo-is-complete{
+    text-decoration: line-through;
+    color: var(--Secondary-Color);
+}
+
+.todo-container-buttom-menu{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 25px;
+    padding-right: 25px;
+    color:var(--Secondary-Color);
+    height: 50px;
+    align-items: center;
+
+}
+
+.element-on-middle {
+    display: flex;
+    font-size: 14px;
+    font-weight: bold;
+    justify-content: center;
+    cursor: pointer;
+    gap: 15px;
+}
+
+.active{
+    color: hsl(220, 98%, 61%);
+}
+
+.todo-container-buttom-menu p:hover{
+    color: var(--Very-Hover-Color);
+    cursor: pointer;
+    
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+    margin-bottom: 10px;
+}
+
+footer p{
+    color: var(--Secondary-Color) ;
+    font-size: 14px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
