@@ -190,7 +190,7 @@ form {
 
 }
 
-.element-on-middle {
+.element-on-middle{
     display: flex;
     font-size: 14px;
     font-weight: bold;
@@ -203,7 +203,7 @@ form {
     color: hsl(220, 98%, 61%);
 }
 
-.todo-container-buttom-menu p:hover{
+.todo-container-buttom-menu p:hover,.todo-container-buttom-menu-2 p:hover{
     color: var(--Very-Hover-Color);
     cursor: pointer;
     
@@ -222,3 +222,51 @@ footer p{
     padding-top: 10px;
     padding-bottom: 10px;
 }
+
+.todo-container-buttom-menu-2{
+    display: none;
+}
+
+      /*Mobile Screen */
+
+      @media only screen and (max-width: 375px) {
+        .todo-screen-container{
+            max-width: 327px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+    
+        .erase-todo{
+            margin-left: 10px;
+            opacity: 1;
+        }
+    
+        .todo-container-buttom-menu-2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            background: var(--Color-Background) ;
+            box-shadow:  1px 0.6px 5.4px 0.6px var(--Box-Shadow);
+            height: 50px;
+            border-radius: 5px;
+            flex-grow: 1;
+            color: var(--Secondary-Color);
+            
+        }
+    
+        .element-on-middle {
+            display: none;
+        }
+
+        .mobile-menu{
+            display: flex;
+            font-size: 14px;
+            font-weight: bold;
+            justify-content: center;
+            cursor: pointer;
+            gap: 15px;
+        }
+        
+      }
