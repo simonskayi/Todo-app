@@ -147,9 +147,12 @@ form {
    width: 70%;
     margin-left: 50px;
    word-wrap: break-word;
-   
-
 }
+
+.ptag{
+    color: var(--Black-And-White);
+}
+
 
 .check{
     position: absolute;
@@ -163,6 +166,8 @@ form {
     display: grid;
     cursor: pointer;
 }
+
+
 .check img{
     transform: scale(0);
 }

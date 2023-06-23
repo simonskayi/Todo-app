@@ -54,7 +54,7 @@ function createNewTodo(dataFrom_Storage){
 
    inputBox.value =""
 
-   
+
       /* -click cross icon to delete*/
    let delete_Todo = todoListTemplate.querySelector(".erase-todo");
    delete_Todo.addEventListener("click", ()=>{
@@ -86,7 +86,8 @@ function saveToStorage(){
       })
    });
    localStorage.setItem("todos",JSON.stringify(array));
-}
+};
+
 
 
 function changeTheme(){
