@@ -1,5 +1,5 @@
-# Todo App
-
+# AmaliTech Digital Training Programme
+# Project: Todo Web Application
 Todo App is a simple and intuitive web application that allows users to manage their to-do lists effectively.
 The app offers a range of features to help users stay organized and productive.
 This README file provides an overview of the app's functionality, installation instructions, and usage guidelines.
@@ -49,9 +49,6 @@ Once you have the Todo App running, you can start managing your to-do list effec
 
 Feel free to explore and utilize the different features of the app to manage your tasks efficiently!
 
-## Contributing
-
-Contributions to the Todo App are always welcome. If you have any suggestions, improvements, or bug fixes, please submit a pull request. For major changes, please open an issue first to discuss the proposed changes.
 
 ## License
 
