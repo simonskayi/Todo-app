@@ -12,31 +12,33 @@
 </head>
 <body>
     <div class="main-container">
-
+                <!--Background Image Area-->
         <div class="header-background">
             <img src="images/bg-desktop-light.jpg" alt="background Image" id="header-img">
         </div>
-
+              
         <section class="todo-screen-container">
            
             <div class="row-1-element">
                 <h2> Todo </h2>
                 <img src="images/icon-moon.svg" alt="Change theme"  id="theme">
             </div>
-
+                    
+                    <!--InputBox Section-->
             <div class ="todo-input-box">
                 <form class="form">
                     <input type="text" id="input-box" placeholder="Create a new todo...">
                 </form>
             </div>
 
+
             <div class="todo-list-container" >
-   
+                     <!--To-dos Display Area-->
               <div id="all-todo" class="drag-area">
                 
                </div>
               
-
+                        <!--Menu Bar -->
                 <div class="todo-container-buttom-menu">
 
                    <p id="items-left">0 items left</p>
@@ -50,7 +52,7 @@
                      <p id="delete-completed">Clear Completed</p>
                 </div>
             </div>
-
+                        <!--Menu Bar(mobile version)-->
             <div class="todo-container-buttom-menu-2"> 
                 <div class="mobile-menu">
                     <p class="active">All</p>
@@ -62,6 +64,7 @@
                <footer><p>Drag and drop to reorder list</p></footer> 
         </section>
     </div>
+                             <!--Scripts-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js" integrity="sha512-Eezs+g9Lq4TCCq0wae01s9PuNWzHYoCMkE97e2qdkYthpI0pzC3UGB03lgEHn2XM85hDOUF6qgqqszs+iXU4UA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="script.js"></script>
 </body>

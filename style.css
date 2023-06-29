@@ -24,6 +24,8 @@
     --Very-Hover-Color: hsl(0,0%,100%);
 }
 
+/*General Styles*/
+
 *{
     margin: 0;
     padding: 0;
@@ -32,6 +34,8 @@
 body{
     background-color:var(--Color-Background);
 }
+
+
 
 .main-container{
     font-family: 'josefin sans', sans-serif;

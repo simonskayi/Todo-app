@@ -54,10 +54,10 @@ function createNewTodo(dataFrom_Storage){
    
    }
 
-   inputBox.value =""
+   inputBox.value = ""
 
 
-      /* -click cross icon to delete*/
+      /*Handling Deletion*/
    let delete_Todo = todoListTemplate.querySelector(".erase-todo");
    delete_Todo.addEventListener("click", ()=>{
    todoListTemplate.remove();
@@ -94,8 +94,9 @@ function saveToStorage(){
 };
 
 menuEventListerner()
-
 const todoli = document.querySelectorAll(".todo-li");
+
+
    function menuEventListerner (){
          const todo_menu_bar = document.querySelectorAll(".element-on-middle p, .mobile-menu p")
             todo_menu_bar.forEach(element =>{
@@ -129,6 +130,7 @@ const todoli = document.querySelectorAll(".todo-li");
             });
          };
 
+
          function clearCompletedTodo(){
             const  clearComplete = document.getElementById("delete-completed");
             clearComplete.addEventListener("click",()=>{
@@ -160,8 +162,7 @@ const todoli = document.querySelectorAll(".todo-li");
                location.reload();
             }
 
-
-
+            /* Dark & Light Theme*/
             const themeIcon = document.getElementById("theme");
             const header_img = document.getElementById("header-img");
             const savedTheme = JSON.parse(localStorage.getItem("theme"));
@@ -192,11 +193,13 @@ const todoli = document.querySelectorAll(".todo-li");
                    header_img.src = "images/bg-desktop-light.jpg";
                  }
 
- function dragSort(){
-   const dragarea = document.querySelector(".drag-area")
-  new Sortable(dragarea,{
-     animation: 340
-  })
- };
 
- dragSort()
+               /* Drag and reorder */
+               function dragSort(){
+                  const dragarea = document.querySelector(".drag-area")
+               new Sortable(dragarea,{
+                  animation: 340
+               })
+               };
+
+               dragSort()
