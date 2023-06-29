@@ -1,5 +1,5 @@
-# Todo App
-
+# AmaliTech Digital Training Programme
+# Project: Todo Web Application
 Todo App is a simple and intuitive web application that allows users to manage their to-do lists effectively.
 The app offers a range of features to help users stay organized and productive.
 This README file provides an overview of the app's functionality, installation instructions, and usage guidelines.
@@ -12,11 +12,11 @@ This README file provides an overview of the app's functionality, installation i
 3. **Hover States**: Interactive elements on the app, such as buttons and links, include hover states,
    providing visual feedback to enhance the user experience.
 
-5. **Add New To-dos**: Users can easily add new to-dos to their list by using the designated input field. Simply enter the task details and press the "Add" button to append it to the list.
+5. **Add New To-dos**: Users can easily add new to-dos to their list by using the designated input field. Simply enter the task details and press "Enter" on your keyboard to append it to the list.
 
 6. **Mark To-dos as Complete**: Each to-do item in the list includes a checkbox. Users can mark tasks as complete by checking the corresponding box, visually indicating progress and completion.
 
-7. **Delete To-dos**: If users wish to remove a specific to-do from the list, they can click the associated delete button. This action permanently removes the item from the list.
+7. **Delete To-dos**: If users wish to remove a specific to-do from the list, they can click the associated cross button. This action permanently removes the item from the list.
 
 8. **Filtering**: The app offers filtering options to help users manage their to-do list efficiently. Users can choose to view all tasks, filter for active to-dos only, or focus on completed tasks.
 
@@ -49,9 +49,6 @@ Once you have the Todo App running, you can start managing your to-do list effec
 
 Feel free to explore and utilize the different features of the app to manage your tasks efficiently!
 
-## Contributing
-
-Contributions to the Todo App are always welcome. If you have any suggestions, improvements, or bug fixes, please submit a pull request. For major changes, please open an issue first to discuss the proposed changes.
 
 ## License
 
