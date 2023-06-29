@@ -12,7 +12,7 @@ form.addEventListener('submit',(event)=>{
 
      else{
       createNewTodo()
-      
+      refreshTodos()
      }
      
 })
@@ -62,7 +62,7 @@ function createNewTodo(dataFrom_Storage){
    delete_Todo.addEventListener("click", ()=>{
    todoListTemplate.remove();
    saveToStorage()
-  
+  refreshTodos()
    })
    
    
@@ -129,7 +129,29 @@ const todoli = document.querySelectorAll(".todo-li");
             });
          };
 
+         function clearCompletedTodo(){
+            const  clearComplete = document.getElementById("delete-completed");
+            clearComplete.addEventListener("click",()=>{
+               todoli.forEach(list =>{
+                  if (list.children[0].children[1].classList.contains("todo-is-complete")){
+                     list.remove()
+                     saveToStorage()
+                     refreshTodos()
+                     
+                  }
+               });
+            })
+         };
+      
+         clearCompletedTodo()
 
+
+     
+      
+         
+         function refreshTodos(){
+               location.reload();
+            }
 
 
 
