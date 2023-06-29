@@ -146,7 +146,14 @@ const todoli = document.querySelectorAll(".todo-li");
          clearCompletedTodo()
 
 
-     
+         function activeItemsLeft() {
+            let itemsLeft = document.getElementById("items-left")
+            let activeTodo = document.querySelectorAll("list-element .check-active")
+            let result = todoli.length-activeTodo.length;
+            itemsLeft.innerText =`${result} items left`;
+         };
+      
+         activeItemsLeft()
       
          
          function refreshTodos(){
