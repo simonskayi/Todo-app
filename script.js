@@ -12,6 +12,7 @@ form.addEventListener('submit',(event)=>{
 
      else{
       createNewTodo()
+      
      }
      
 })
@@ -61,6 +62,7 @@ function createNewTodo(dataFrom_Storage){
    delete_Todo.addEventListener("click", ()=>{
    todoListTemplate.remove();
    saveToStorage()
+  
    })
    
    
@@ -73,6 +75,8 @@ function createNewTodo(dataFrom_Storage){
 
       saveToStorage()
    })  
+   todoListTemplate.classList.add("todo-li")   
+
 };
 
 
@@ -88,6 +92,43 @@ function saveToStorage(){
    });
    localStorage.setItem("todos",JSON.stringify(array));
 };
+
+menuEventListerner()
+
+const todoli = document.querySelectorAll(".todo-li");
+   function menuEventListerner (){
+         const todo_menu_bar = document.querySelectorAll(".element-on-middle p, .mobile-menu p")
+            todo_menu_bar.forEach(element =>{
+               element.addEventListener("click",()=>{
+                  todo_menu_bar.forEach(item =>{
+                     item.classList.remove("active");
+                  });
+         
+                  element.classList.add("active")
+                  if (element.innerText=="Active"){
+                     todoli.forEach(item =>{
+                        if(!item.children[0].children[1].classList.contains("todo-is-complete")){item.style.display ="block"}
+                        else{item.style.display="none"}
+                     })
+                  }
+                  else if (element.innerText=="Completed"){ 
+                     todoli.forEach(item =>{
+                     if(item.children[0].children[1].classList.contains("todo-is-complete")){item.style.display ="block"}
+                     else{item.style.display="none"}
+                  })
+               }
+         
+                  else{
+                     todoli.forEach(item =>{
+                        item.style.display="block";
+                        })
+                  
+                  }
+               })
+               
+            });
+         };
+
 
 
 
