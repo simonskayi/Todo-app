@@ -162,39 +162,35 @@ const todoli = document.querySelectorAll(".todo-li");
 
 
 
-function changeTheme(){
-    let  icon = document.getElementById("theme");
-    let header_img = document.getElementById("header-img")
-     let set;
-    icon.onclick = function(){
-       document.body.classList.toggle("dark-mode");
-       if(document.body.classList.contains("dark-mode")){
-          icon.src = "images/icon-sun.svg";
-          header_img.src = "images/bg-desktop-dark.jpg"
-          set = "dark-mode";
-       }
-       else{
-          icon.src = "images/icon-moon.svg"
-          header_img.src = "images/bg-desktop-light.jpg"
-          set ="";
-       }
-
-          localStorage.setItem("theme",JSON.stringify(set))
-    }
-   }
-
-   changeTheme()
-
-
-   function  mySavedTheme(){
-    let getTheme = JSON.parse(localStorage.getItem("theme"))
-    if(getTheme==="dark-mode"){
-       document.body.classList ="dark-mode"
-    }
-   }
-
- mySavedTheme()
-
+            const themeIcon = document.getElementById("theme");
+            const header_img = document.getElementById("header-img");
+            const savedTheme = JSON.parse(localStorage.getItem("theme"));
+                 
+             function toggleTheme() {
+               document.body.classList.toggle("dark-mode");
+                 
+               if (document.body.classList.contains("dark-mode")) {
+                     themeIcon.src = "images/icon-sun.svg";
+                     header_img.src = "images/bg-desktop-dark.jpg";
+                     localStorage.setItem("theme", JSON.stringify("dark-mode"));
+                   } else {
+                     themeIcon.src = "images/icon-moon.svg";
+                     header_img.src = "images/bg-desktop-light.jpg";
+                     localStorage.setItem("theme", JSON.stringify(""));
+                   }
+                 }
+                 
+                 themeIcon.addEventListener("click", toggleTheme);
+                 
+                 if (savedTheme === "dark-mode") {
+                   document.body.classList.add("dark-mode");
+                   themeIcon.src = "images/icon-sun.svg";
+                   header_img.src = "images/bg-desktop-dark.jpg";
+                 }
+                 else {
+                   themeIcon.src = "images/icon-moon.svg";
+                   header_img.src = "images/bg-desktop-light.jpg";
+                 }
 
  function dragSort(){
    const dragarea = document.querySelector(".drag-area")
