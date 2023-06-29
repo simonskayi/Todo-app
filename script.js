@@ -1,6 +1,6 @@
 const inputBox = document.getElementById("input-box");
 const form = document.querySelector("form");
-let todos_Stored = JSON.parse(localStorage.getItem("todos"));
+
 
 
 form.addEventListener('submit',(event)=>{
@@ -18,6 +18,7 @@ form.addEventListener('submit',(event)=>{
 
 
 /* Retrive Stored Todos*/
+let todos_Stored = JSON.parse(localStorage.getItem("todos"));
 if(todos_Stored){
    todos_Stored.forEach(element =>{
          
@@ -87,6 +88,7 @@ function saveToStorage(){
    });
    localStorage.setItem("todos",JSON.stringify(array));
 };
+
 
 
 
