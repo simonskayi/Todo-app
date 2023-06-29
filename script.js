@@ -194,3 +194,13 @@ function changeTheme(){
    }
 
  mySavedTheme()
+
+
+ function dragSort(){
+   const dragarea = document.querySelector(".drag-area")
+  new Sortable(dragarea,{
+     animation: 340
+  })
+ };
+
+ dragSort()
