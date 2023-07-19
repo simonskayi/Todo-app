@@ -288,4 +288,44 @@ footer p{
             gap: 15px;
         }
         
-      }
+      }   
+      
+        /* For Tablet Screen 580px*/
+
+      @media only screen and (max-width: 580px) {
+        .todo-screen-container{
+            max-width: 500px;
+            margin-left: 25px;
+            margin-right: 25px;
+        }
+
+    }
+
+    @media only screen and (max-width: 490px){
+        .todo-container-buttom-menu-2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            background: var(--Color-Background) ;
+            box-shadow:  1px 0.6px 5.4px 0.6px var(--Box-Shadow);
+            height: 50px;
+            border-radius: 5px;
+            flex-grow: 1;
+            color: var(--Secondary-Color);
+            
+        }
+    
+        .element-on-middle {
+            display: none;
+        }
+
+        .mobile-menu{
+            display: flex;
+            font-size: 14px;
+            font-weight: bold;
+            justify-content: center;
+            cursor: pointer;
+            gap: 15px;
+        }}
