@@ -12,7 +12,6 @@ form.addEventListener('submit',(event)=>{
 
      else{
       createNewTodo()
-      refreshTodos()
      }
      
 })
@@ -24,7 +23,7 @@ if(todos_Stored){
    todos_Stored.forEach(element =>{
          
       createNewTodo(element)
-        
+     
    })
    
 }
@@ -33,6 +32,7 @@ if(todos_Stored){
 function createNewTodo(dataFrom_Storage){
    const listContainer = document.getElementById("all-todo");
    const todoListTemplate = document.createElement("div");
+    todoListTemplate.classList.add("todo-li")
    let todoText = inputBox.value;
 
    if(dataFrom_Storage){
@@ -49,9 +49,10 @@ function createNewTodo(dataFrom_Storage){
   <div class="erase-todo"><img src="images/icon-cross.svg" alt=""></div>
    </div>
    `
+  
    listContainer.appendChild(todoListTemplate);        
    saveToStorage()
-   
+   activeItemsLeft() 
    }
 
    inputBox.value = ""
@@ -62,7 +63,7 @@ function createNewTodo(dataFrom_Storage){
    delete_Todo.addEventListener("click", ()=>{
    todoListTemplate.remove();
    saveToStorage()
-  refreshTodos()
+   activeItemsLeft()
    })
    
    
@@ -72,13 +73,12 @@ function createNewTodo(dataFrom_Storage){
    check.addEventListener("click", ()=>{
       check.classList.toggle("check-active")
       todoListTemplate.children[0].children[1].classList.toggle("todo-is-complete")
-
-      saveToStorage()
+      saveToStorage()   
    })  
-   todoListTemplate.classList.add("todo-li")   
-
+      
 };
 
+const todoli = document.querySelectorAll(".todo-li");
 
 function saveToStorage(){
    let array = [];
@@ -90,19 +90,19 @@ function saveToStorage(){
          complete:element.classList.contains("todo-is-complete")
       })
    });
-   localStorage.setItem("todos",JSON.stringify(array));
+   
+   localStorage.setItem("todos",JSON.stringify(array)); 
+   
 };
 
 menuEventListerner()
-const todoli = document.querySelectorAll(".todo-li");
-
-
    function menuEventListerner (){
-         const todo_menu_bar = document.querySelectorAll(".element-on-middle p, .mobile-menu p")
+         const todo_menu_bar = document.querySelectorAll(".element-on-middle button, .mobile-menu button")
             todo_menu_bar.forEach(element =>{
                element.addEventListener("click",()=>{
                   todo_menu_bar.forEach(item =>{
                      item.classList.remove("active");
+                     
                   });
          
                   element.classList.add("active")
@@ -117,19 +117,23 @@ const todoli = document.querySelectorAll(".todo-li");
                      if(item.children[0].children[1].classList.contains("todo-is-complete")){item.style.display ="block"}
                      else{item.style.display="none"}
                   })
+                  
                }
          
                   else{
                      todoli.forEach(item =>{
                         item.style.display="block";
+                        
                         })
                   
                   }
                })
                
             });
+           
          };
-
+         
+        
 
          function clearCompletedTodo(){
             const  clearComplete = document.getElementById("delete-completed");
@@ -137,9 +141,7 @@ const todoli = document.querySelectorAll(".todo-li");
                todoli.forEach(list =>{
                   if (list.children[0].children[1].classList.contains("todo-is-complete")){
                      list.remove()
-                     saveToStorage()
-                     refreshTodos()
-                     
+                     saveToStorage() 
                   }
                });
             })
@@ -148,20 +150,17 @@ const todoli = document.querySelectorAll(".todo-li");
          clearCompletedTodo()
 
 
-         function activeItemsLeft() {
+       function  activeItemsLeft() {
             let itemsLeft = document.getElementById("items-left")
             let activeTodo = document.querySelectorAll(".list-element .check-active")
-            let result = todoli.length - activeTodo.length;
+            let todol = document.querySelectorAll(".todo-li");
+            let result = todol.length - activeTodo.length;
             itemsLeft.innerText =`${result} items left`;
          };
       
-         activeItemsLeft()
-      
          
-         function refreshTodos(){
-               location.reload();
-            }
-
+      
+      
             /* Dark & Light Theme*/
             const themeIcon = document.getElementById("theme");
             const header_img = document.getElementById("header-img");
@@ -199,7 +198,7 @@ const todoli = document.querySelectorAll(".todo-li");
                   const dragarea = document.querySelector(".drag-area")
                new Sortable(dragarea,{
                   animation: 340
-               })
+                  })
                };
 
                dragSort()
