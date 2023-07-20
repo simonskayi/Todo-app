@@ -135,8 +135,8 @@ form {
 }
 
 #all-todo{
-    max-height: 270px;
-    overflow:auto;
+    max-height: 250px;
+    overflow: auto;
 }
 
 .list-element{
