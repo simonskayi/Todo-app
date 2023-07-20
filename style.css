@@ -3,6 +3,7 @@
     /*Typography*/
     --Custom-Font-size: 18px;
     --custom-radius: 5px;
+    --custom-Font-family:'josefin sans';
 
     /*### Light Theme  */
     --Color-Background: hsl(0, 0%, 98%);
@@ -38,7 +39,7 @@ body{
 
 
 .main-container{
-    font-family: 'josefin sans', sans-serif;
+    font-family: var(--custom-Font-family), sans-serif;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
@@ -133,6 +134,11 @@ form {
    
 }
 
+#all-todo{
+    max-height: 250px;
+    overflow: auto;
+}
+
 .list-element{
     position: relative;
     display: flex;
@@ -222,7 +228,16 @@ form {
     color: hsl(220, 98%, 61%);
 }
 
-.todo-container-buttom-menu p:hover,.todo-container-buttom-menu-2 p:hover{
+button{
+    background: none;
+    border: none;
+    font-family:var(--custom-Font-family);
+    font-weight: bold;
+    color: var(--Secondary-Color);
+    
+}
+
+.todo-container-buttom-menu button:hover,.todo-container-buttom-menu-2 button:hover{
     color: var(--Very-Hover-Color);
     cursor: pointer;
     
@@ -319,6 +334,11 @@ footer p{
     
         .element-on-middle {
             display: none;
+        }
+
+        .erase-todo{
+            margin-left: 10px;
+            opacity: 1;
         }
 
         .mobile-menu{
