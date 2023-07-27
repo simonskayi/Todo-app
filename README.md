@@ -36,6 +36,9 @@ To run the Todo App locally, please follow these steps:
 4. Start the development server: `npm start`
 5. Open your web browser and visit `http://localhost:3000` to access the app.
 
+Alternatively, you can also access the web application by entering the following URL in your preferred browser: https://simonsarhins.netlify.app/
+By following these steps, you will have the Todo App up and running on your local machine or via the provided web URL.
+
 ## Usage
 
 Once you have the Todo App running, you can start managing your to-do list effectively. Here are some guidelines to get you started:
