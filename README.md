@@ -1,4 +1,4 @@
-# AmaliTech Digital Training Programme
+
 # Project: Todo Web Application
 Todo App is a simple and intuitive web application that allows users to manage their to-do lists effectively.
 The app offers a range of features to help users stay organized and productive.
